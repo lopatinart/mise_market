@@ -1,0 +1,165 @@
+/* Общий стиль */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Хеддер */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.menu-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Сайд-меню */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.side-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #333;
+}
+
+.side-menu a:hover {
+    color: #aaa;
+}
+
+.side-menu .close-menu {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+/* Основное тело */
+main {
+    padding: 1rem;
+}
+
+.category {
+    margin-bottom: 2rem;
+}
+
+.products {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+}
+
+.products::-webkit-scrollbar {
+    height: 8px;
+}
+
+.products::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+}
+
+.products::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Карточки товаров */
+.product-card {
+    flex: 0 0 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #222;
+    border-radius: 8px;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.product-card img {
+    height: 260px;
+    width: 200px;
+    border-radius: 0.5rem;
+}
+
+.product-card h4 {
+    margin-bottom: 0.5rem;
+}
+
+.product-card .price {
+    margin-top: auto;
+    margin-bottom: 0.3rem;
+    color: #fff;
+    font-size: 14px;
+}
+
+.product-card button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 0.1rem;
+    align-self: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.product-card button:hover {
+    background-color: #555;
+}
+
+/* Футер */
+.footer {
+    padding: 1rem;
+    background-color: #000;
+    text-align: center;
+    margin: 0;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    margin: 0;
+}

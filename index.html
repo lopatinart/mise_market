@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>misé market</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="logo_low.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">misé market</div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </header>
+
+        <!-- Выезжающее меню -->
+        <nav class="side-menu" id="side-menu">
+            <button class="close-menu" onclick="toggleMenu()">x</button>
+            <a href="#clothing" onclick="closeMenu()">Одежда</a>
+            <a href="#shoes" onclick="closeMenu()">Обувь</a>
+            <a href="#accessories" onclick="closeMenu()">Аксессуары</a>
+            <a href="#perfumes" onclick="closeMenu()">Духи</a>
+        </nav>
+        <!-- Основное тело -->
+        <main>
+            <!-- Блок: Одежда -->
+            <section id="clothing" class="category">
+                <h2>Одежда</h2>
+                <div class="products scrollable">
+                    <div class="product-card">
+                        <img src="products/clothes/1.jpg" alt="Product">
+                        <h4>Raf Simons Hoodie Die Cast Print</h4>
+                        <p class="price">22 320₽</p>
+                        <button onclick="viewProduct('clothing1.html')">Написать</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="products/clothes/2.jpg" alt="Product">
+                        <h4>Enfants Riches Deprimes</h4>
+                        <p class="price">415 539₽</p>
+                        <button onclick="viewProduct('clothing1.html')">Написать</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="products/clothes/3.jpg" alt="Product">
+                        <h4>Maison Margiela reversed logo hoodie</h4>
+                        <p class="price">19 590₽</p>
+                        <button onclick="viewProduct('clothing1.html')">Написать</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Блок: Обувь -->
+            <section id="shoes" class="category">
+                <h2>Обувь</h2>
+                <div class="products scrollable">
+                    <div class="product-card">
+                        <img src="shoes1.jpg" alt="Product">
+                        <h3>Название товара</h3>
+                        <button onclick="viewProduct('shoes1.html')">Написать</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Блок: Аксессуары -->
+            <section id="accessories" class="category">
+                <h2>Аксессуары</h2>
+                <div class="products scrollable">
+                    <div class="product-card">
+                        <img src="accessory1.jpg" alt="Product">
+                        <h3>Название товара</h3>
+                        <button onclick="viewProduct('accessory1.html')">Написать</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Блок: Духи -->
+            <section id="perfumes" class="category">
+                <h2>Духи</h2>
+                <div class="products scrollable">
+                    <div class="product-card">
+                        <img src="perfume1.jpg" alt="Product">
+                        <h3>Название товара</h3>
+                        <button onclick="viewProduct('perfume1.html')">Написать</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <a href="https://t.me/tengo01">telegram</a> <a href="mailto:your_email@example.com">email</a>
+        </footer>
+    </div>
+</body>
+
+</html>
