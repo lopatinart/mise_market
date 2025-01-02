@@ -17,7 +17,7 @@ function sendMessageToBot(productName, productPrice, productImageUrl) {
     // Получение данных пользователя через Telegram Web App
     let userTelegramId = 'Unknown User'; // Значение по умолчанию
     if (window.Telegram.WebApp && window.Telegram.WebApp.initDataUnsafe) {
-        userTelegramId = window.Telegram.WebApp.initDataUnsafe.user?.id || 'Unknown User';
+        userTelegramId = window.Telegram.WebApp.initDataUnsafe.user.id || 'Unknown User';
     }
 
     // Полный путь к изображению
