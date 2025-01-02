@@ -4,15 +4,15 @@ function sendMessageToBot(productName, productPrice, productImageUrl) {
     const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
     // Получение данных пользователя через Telegram Web App
-    const telegramData = window.Telegram.WebApp.initDataUnsafe.user;
-    const userTelegramId = telegramData ? telegramData.username : "Неавторизованный пользователь";
+    // const telegramData = window.Telegram.WebApp.initDataUnsafe.user;
+    // const userTelegramId = telegramData ? telegramData.username : "Неавторизованный пользователь";
 
     // Полный путь к изображению
     const productImageUrlAbsolute = `https://lopatinart.github.io/mise_market/${productImageUrl}`;
 
     // Формирование сообщения
     const message = `
-        *Пользователь*: ${userTelegramId}
+        // *Пользователь*: ${userTelegramId}
         *Название товара*: ${productName}
         *Цена*: ${productPrice}
         [Посмотреть товар](${productImageUrlAbsolute})
