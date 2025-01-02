@@ -12,24 +12,24 @@ function sendMessageToBot(productName, productPrice, productImageUrl) {
     const userTelegramId = '934127824'; // Укажите ваш ID для тестов
     const botToken = '7574870490:AAEMz1sBMUeerGiBLUefT0OKwwU8YaRces8'; // Замените на ваш токен бота
 
-    const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+    const url = `https://api.telegram.org/bot${botToken}/sendPhoto`; // Изменяем на sendPhoto для отправки фото
     const message = `
         *Название товара*: ${productName}
         *Цена*: ${productPrice}
-        [Посмотреть товар](${productImageUrl})
     `;
 
-    // fetch(url, {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({
-    //         chat_id: userTelegramId,
-    //         text: message,
-    //         parse_mode: 'Markdown',
-    //     }),
-    // })
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            chat_id: userTelegramId,
+            photo: productImageUrl, // Отправляем фото
+            caption: message, // Подпись для фото
+            parse_mode: 'Markdown',
+        }),
+    })
         .then((response) => {
             if (!response.ok) {
                 throw new Error('Ошибка при отправке сообщения');
@@ -37,11 +37,10 @@ function sendMessageToBot(productName, productPrice, productImageUrl) {
             return response.json();
         })
         .then((data) => {
-            alert('Сообщение отправлено!');
+            console.log('Сообщение отправлено:', data);
         })
         .catch((error) => {
             console.error('Ошибка:', error);
-            alert('Не удалось отправить сообщение.');
         });
 }
 
