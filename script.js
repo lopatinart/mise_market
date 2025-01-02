@@ -16,6 +16,7 @@ function sendMessageToBot(productName, productPrice, productImageUrl) {
     const message = `
         *Название товара*: ${productName}
         *Цена*: ${productPrice}
+        [Посмотреть товар](${productImageUrl})
     `;
 
     fetch(url, {
