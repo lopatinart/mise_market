@@ -49,9 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
     buttons.forEach((button) => {
         button.addEventListener("click", (event) => {
             const card = event.target.closest(".product-card");
-            const productName = card.querySelector("h4").textContent;
-            const productPrice = card.querySelector(".price").textContent;
-            const productImage = card.querySelector("img").getAttribute('src');
+            const productName = card.querySelector("h4")?.textContent;
+            const productPrice = card.querySelector(".price")?.textContent;
+            const productImage = card.querySelector("img")?.getAttribute('src');
 
             sendMessageToBot(productName, productPrice, productImage);
         });
