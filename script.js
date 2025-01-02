@@ -1,7 +1,7 @@
 function sendMessageToBot(productName, productPrice, productImageUrl) {
     const adminChatId = '934127824'; // Чат ID администратора
     const botToken = '7574870490:AAEMz1sBMUeerGiBLUefT0OKwwU8YaRces8';
-    const apiUrl = `https://api.telegram.org/bot${botToken}/sendPhoto`;
+    const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
     // Получение данных пользователя через Telegram Web App
     const telegramData = window.Telegram.WebApp.initDataUnsafe.user;
