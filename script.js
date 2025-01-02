@@ -41,3 +41,19 @@ function sendMessageToBot(productName, productPrice, productImageUrl) {
             alert('Ошибка при отправке сообщения.');
         });
 }
+
+// Привязка кнопок к функции
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".product-card button.send");
+
+    buttons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            const card = event.target.closest(".product-card");
+            const productName = card.querySelector("h4").textContent;
+            const productPrice = card.querySelector(".price").textContent;
+            const productImage = card.querySelector("img").getAttribute('src');
+
+            sendMessageToBot(productName, productPrice, productImage);
+        });
+    });
+});
