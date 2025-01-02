@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const productImage = card.querySelector("img").src;
 
             // Получение Telegram ID пользователя через Web App
-            const userTelegramId = window.Telegram.WebApp.initDataUnsafe?.user?.id || 'Неизвестный пользователь';
+            const userTelegramId = window.tg.initDataUnsafe.user.id || 'Неизвестный пользователь';
 
             sendMessageToBot(productName, productPrice, productImage, userTelegramId);
         });
