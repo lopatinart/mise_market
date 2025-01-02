@@ -49,6 +49,7 @@ function sendMessageToBot(productName, productPrice, productImageUrl, userTelegr
 
 // Привязка кнопок к функции
 document.addEventListener("DOMContentLoaded", () => {
+    let tg = window.Telegram.WebApp;
     const buttons = document.querySelectorAll(".product-card button");
 
     buttons.forEach((button) => {
