@@ -10,7 +10,7 @@ function closeMenu() {
 
 function sendMessageToBot(productName, productPrice, productImageUrl) {
     // Настройки для отправки сообщения
-    const adminChatId = '7877726047'; // Чат ID администратора
+    const adminChatId = '934127824'; // Чат ID администратора
     const botToken = '7574870490:AAEMz1sBMUeerGiBLUefT0OKwwU8YaRces8';
     const apiUrl = `https://api.telegram.org/bot${botToken}/sendPhoto`;
 
