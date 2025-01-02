@@ -13,10 +13,11 @@ function sendMessageToBot(productName, productPrice, productImageUrl) {
     const botToken = '7574870490:AAEMz1sBMUeerGiBLUefT0OKwwU8YaRces8'; // Замените на ваш токен бота
 
     const url = `https://api.telegram.org/bot${botToken}/sendPhoto`; // Изменяем на sendPhoto для отправки фото
+    const productImageUrlToSite = 'https://lopatinart.github.io/mise_market/' + productImageUrl;
     const message = `
         *Название товара*: ${productName}
         *Цена*: ${productPrice}
-        [Посмотреть товар](${productImageUrl})
+        [Посмотреть товар](${productImageUrlToSite})
     `;
 
     fetch(url, {
