@@ -23,7 +23,7 @@
             <a href="#clothing" onclick="closeMenu()">Одежда</a>
             <a href="#shoes" onclick="closeMenu()">Обувь</a>
             <a href="#accessories" onclick="closeMenu()">Аксессуары</a>
-            <a href="#perfumes" onclick="closeMenu()">Духи</a>
+            <a href="#perfumes" onclick="closeMenu()">Парфюм</a>
         </nav>
         <!-- Основное тело -->
         <main>
@@ -35,19 +35,22 @@
                         <img src="products/clothes/1.jpg" alt="Product">
                         <h4>Raf Simons Hoodie Die Cast Print</h4>
                         <p class="price">22 320₽</p>
-                        <button onclick="viewProduct('clothing1.html')">Написать</button>
+                        <button class="send"
+                            onclick="sendMessageToBot('Raf Simons Hoodie Die Cast Print', '22 320₽', 'products/clothes/1.jpg')">
+                            Написать
+                        </button>
                     </div>
                     <div class="product-card">
                         <img src="products/clothes/2.jpg" alt="Product">
                         <h4>Enfants Riches Deprimes</h4>
                         <p class="price">415 539₽</p>
-                        <button onclick="viewProduct('clothing1.html')">Написать</button>
+                        <button onclick="viewProduct('clothing1.html')" class="send">Написать</button>
                     </div>
                     <div class="product-card">
                         <img src="products/clothes/3.jpg" alt="Product">
                         <h4>Maison Margiela reversed logo hoodie</h4>
                         <p class="price">19 590₽</p>
-                        <button onclick="viewProduct('clothing1.html')">Написать</button>
+                        <button onclick="viewProduct('clothing1.html')" class="send">Написать</button>
                     </div>
                 </div>
             </section>
@@ -78,7 +81,7 @@
 
             <!-- Блок: Духи -->
             <section id="perfumes" class="category">
-                <h2>Духи</h2>
+                <h2>Парфюм</h2>
                 <div class="products scrollable">
                     <div class="product-card">
                         <img src="perfume1.jpg" alt="Product">
