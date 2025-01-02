@@ -9,7 +9,7 @@ function closeMenu() {
 }
 
 function sendMessageToBot(productName, productPrice, productImageUrl, userTelegramId) {
-    const adminChatId = '754288295'; // Замените на ID администратора
+    const adminChatId = '934127824'; // Замените на ID администратора
     const botToken = '7574870490:AAEMz1sBMUeerGiBLUefT0OKwwU8YaRces8';
     const url = `https://api.telegram.org/bot${botToken}/sendPhoto`;
     const productImageUrlToSite = 'https://lopatinart.github.io/mise_market/' + productImageUrl;
