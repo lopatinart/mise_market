@@ -19,17 +19,17 @@ function sendMessageToBot(productName, productPrice, productImageUrl) {
         [Посмотреть товар](${productImageUrl})
     `;
 
-    fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            chat_id: userTelegramId,
-            text: message,
-            parse_mode: 'Markdown',
-        }),
-    })
+    // fetch(url, {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({
+    //         chat_id: userTelegramId,
+    //         text: message,
+    //         parse_mode: 'Markdown',
+    //     }),
+    // })
         .then((response) => {
             if (!response.ok) {
                 throw new Error('Ошибка при отправке сообщения');
