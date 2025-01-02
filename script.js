@@ -24,7 +24,7 @@ function sendMessageToBot(productName, productPrice, productImageUrl) {
         body: JSON.stringify({
             chat_id: adminChatId,
             photo: productImageUrlAbsolute,
-            caption: message,
+            text: message,
             parse_mode: 'Markdown',
         }),
     })
