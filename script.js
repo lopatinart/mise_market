@@ -50,6 +50,7 @@ function sendMessageToBot(productName, productPrice, productImageUrl) {
         .then((data) => {
             console.log('Сообщение отправлено:', data);
             alert('Сообщение успешно отправлено администратору!');
+            window.Telegram.WebApp.close()
         })
         .catch((error) => {
             console.error('Ошибка:', error);
