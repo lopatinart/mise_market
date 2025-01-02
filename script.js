@@ -9,10 +9,10 @@ function closeMenu() {
 }
 
 function sendMessageToBot(productName, productPrice, productImageUrl) {
-    const userTelegramId = '754288295'; // Укажите ваш ID для тестов
-    const botToken = '7574870490:AAEMz1sBMUeerGiBLUefT0OKwwU8YaRces8'; // Замените на ваш токен бота
+    const userTelegramId = '754288295';
+    const botToken = '7574870490:AAEMz1sBMUeerGiBLUefT0OKwwU8YaRces8';
 
-    const url = `https://api.telegram.org/bot${botToken}/sendPhoto`; // Изменяем на sendPhoto для отправки фото
+    const url = `https://api.telegram.org/bot${botToken}/sendPhoto`;
     const productImageUrlToSite = 'https://lopatinart.github.io/mise_market/' + productImageUrl;
     const message = `
         *Название товара*: ${productName}
@@ -61,24 +61,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-// Функция для переноса пользователя на страницу товара
-// function viewProduct(url) {
-
-//     window.location.href = "https://t.me/tengo01";
-// }
-
-// let tg = window.Telegram.WebApp;
-// let send_message = document.getElementsByClassName('send');
-
-// send_message.addEventListener('click', () => {
-//     let product_name = document.getElementByName('1').value
-//     let product_cost = document.getElementByName('1.1').value
-
-//     let product_data = {
-//         name: product_name,
-//         cost: product_cost
-//     }
-
-//     tg.sendData(JSON.stringify(data));
-// });
