@@ -15,7 +15,7 @@ function sendMessageToBot(productName, productPrice, productImageUrl) {
     const apiUrl = `https://api.telegram.org/bot${botToken}/sendPhoto`;
 
     // Получение данных пользователя через Telegram Web App
-    const userTelegramId = window.Telegram.WebApp.initDataUnsafe.user.id
+    const userTelegramId = window.Telegram.WebApp.initDataUnsafe.user.username
 
     // Полный путь к изображению
     const productImageUrlAbsolute = `https://lopatinart.github.io/mise_market/${productImageUrl}`;
