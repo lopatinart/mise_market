@@ -12,7 +12,6 @@ function sendMessageToBot(productName, productPrice, productImageUrl) {
 
     // Формирование сообщения
     const message = `
-        // *Пользователь*: ${userTelegramId}
         *Название товара*: ${productName}
         *Цена*: ${productPrice}
         [Посмотреть товар](${productImageUrlAbsolute})
