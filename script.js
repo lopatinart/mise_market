@@ -7,7 +7,7 @@ function sendMessageToBot(productName, productPrice, productImageUrl) {
     //const telegramData = window.Telegram.WebApp.initDataUnsafe.user;
     //const userTelegramId = telegramData ? telegramData.username : "Неавторизованный пользователь";
 
-    const userData = Telegram.WebApp.initDataUnsafe;
+    const userData = window.Telegram.WebApp.initDataUnsafe;
     const username = userData?.user?.username || "неизвестный пользователь";
     const firstName = userData?.user?.first_name || "Гость";
 
